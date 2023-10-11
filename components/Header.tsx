@@ -18,8 +18,8 @@ export default function Header() {
           alt="Vercel Icon"
           src="/peace.gif"
           className="sm:w-12 sm:h-12 w-8 h-8"
-          width={32}
-          height={32}
+          width={24}
+          height={24}
         />
       </a>
     </header>
