@@ -45,21 +45,20 @@ export default function Page() {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         <a
           className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
-          href="https://github.com/Nutlope/twitterbio"
+          href="https://twitter.com/willgivess"
           target="_blank"
-          rel="noopener noreferrer"
         >
           <Github />
-          <p>Star on GitHub</p>
+          <p>Follow Me!</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using chatGPT
+          Generate a premium X bio with help from our AI overlords
         </h1>
-        <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
+        <p className="text-slate-500 mt-5">0 bios generated so far.</p>
         <form className="max-w-xl w-full" onSubmit={onSubmit}>
           <div className="flex mt-10 items-center space-x-3">
             <Image
-              src="/1-black.png"
+              src="/1image.png"
               width={30}
               height={30}
               alt="1 icon"
@@ -79,15 +78,22 @@ export default function Page() {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              'e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com.'
+              'Board Member for the Certified Ronald MacDonald Impersonators Foundation. 35 kids. Sold 2,745 laundromats, 4 hot dog stands, and 18,000 SaaS companies. Bosstrapping my way to Bali! Buy my course!'
             }
           />
           <div className="flex mb-5 items-center space-x-3">
-            <Image src="/2-black.png" width={30} height={30} alt="1 icon" />
-            <p className="text-left font-medium">Select your vibe.</p>
+            <Image src="/2image.png" width={30} height={30} alt="1 icon" />
+            <p className="text-left font-medium">Select your vibe, brah <span className="text-slate-500">
+                (or don't. Actually, you have to for it to work)
+              </span>.</p>
           </div>
-          <div className="block">
+          <div className="block mb-5">
             <DropDown vibe={vibe} setVibe={(newVibe) => setVibe(newVibe)} />
+          </div>
+
+          <div className="flex mb-5 items-center space-x-3">
+            <Image src="/3image.png" width={30} height={30} alt="1 icon" />
+            <p className="text-left font-medium">Profit?</p>
           </div>
 
           {!isLoading && (
@@ -95,7 +101,7 @@ export default function Page() {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               type="submit"
             >
-              Generate your bio &rarr;
+              Generate your premium bio &rarr;
             </button>
           )}
           {isLoading && (
@@ -125,7 +131,7 @@ export default function Page() {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  Your generated bios
+                  Premium generated bios
                 </h2>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -151,6 +157,16 @@ export default function Page() {
               </div>
             </>
           )}
+          <div className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
+              <a
+          className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100 mb-5"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+        >
+          <Github />
+          <p>View Similar Bio ☝️</p>
+        </a>
+              </div>
         </output>
       </main>
       <Footer />
